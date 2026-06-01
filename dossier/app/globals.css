@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "@openclaw/ui/globals.css";
+
+/* Dossier Results Viewer — dark editorial print styles */
+@media print {
+  nav, .no-print { display: none !important; }
+  body { background: #0d1b2a !important; }
+  .print-content { max-width: 100%; }
+}

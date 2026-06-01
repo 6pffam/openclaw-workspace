@@ -1,0 +1,24 @@
+{
+  "caseId": "6cc849eb-6235-4198-ac54-3d39351aed58",
+  "versionId": "fa92993c-1a8d-4565-9476-20d76f26e95f",
+  "versionNumber": 2,
+  "caseName": "Test Case Alpha",
+  "categories": {
+    "intent": "I am an IT supplier, a Cisco global gold partner. As a Cisco partner, I am offering a Cisco UCS solution to an enterprise client. There are other potential partners of Cisco. In addition, other OEMs Lenovo and HPE are also offering. The client however has already made an initial investment into a Cisco UCS solution and now they just search for urgent technology refreshes (upgrades). However, the commercials and delivery times have recently significantly changed. Client is asking the market for potential alternatives and deciding between Cisco UCS or others. I need an assessment of my winning chances.",
+    "company": [
+      "IBM, Novartis, Cisco, Lenovo, Hitachi"
+    ],
+    "individual": [],
+    "time_range": "2025-2026",
+    "topic": [
+      "Cisco UCS solution delivery"
+    ],
+    "keyword": [
+      "supply chain, RAM"
+    ],
+    "link": [],
+    "exclusion": []
+  },
+  "resultsPath": "/Users/6pf/.openclaw/workspace/dossier/results/6cc849eb-6235-4198-ac54-3d39351aed58-v2.md",
+  "triggeredAt": "2026-05-29T14:26:55.051Z"
+}

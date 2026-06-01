@@ -1,0 +1,14 @@
+{
+  "name": "@openclaw/ui",
+  "version": "1.0.0",
+  "description": "Shared design system for OpenClaw apps — dark navy theme",
+  "exports": {
+    ".": "./index.ts",
+    "./globals.css": "./globals.css",
+    "./components/*": "./components/*.tsx"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "next": ">=15"
+  }
+}

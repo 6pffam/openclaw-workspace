@@ -1,0 +1,11 @@
+{
+  "name": "Success",
+  "short_name": "Success",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0d1b2a",
+  "icons": [
+    { "src": "/icon", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/apple-icon", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

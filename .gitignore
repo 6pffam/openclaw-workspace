@@ -1,0 +1,51 @@
+# Dependencies — never commit, always reinstall with npm install
+node_modules/
+
+# Build output — generated from source, not source itself
+.next/
+dist/
+build/
+out/
+
+# Databases — binary files, backed up by Time Machine instead
+*.db
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.data/
+
+# Secrets — API keys, tokens, never in version control
+secrets.json
+.env
+.env.local
+.env*.local
+**/secrets.json
+
+# OpenClaw runtime state — machine-specific, not source
+.openclaw/workspace-state.json
+**/.openclaw/
+
+# Logs
+*.log
+/tmp/
+
+# macOS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Media uploads — potentially large/sensitive inbound files
+media/inbound/
+
+# Raw data imports
+raw/
+
+# Obsidian local settings
+.obsidian/
+
+# Editor
+.vscode/
+.idea/
+
+# Font data (embedded in pptx etc)
+*.fntdata

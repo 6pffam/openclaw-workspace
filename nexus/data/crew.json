@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "updatedAt": "2026-06-01T00:00:00.000Z",
+  "members": [
+    {
+      "id": "ceo",
+      "name": "Nejc",
+      "role": "CEO",
+      "mission": "Vision, final decisions, and approval authority over everything that matters.",
+      "status": "active",
+      "reportsTo": null,
+      "emoji": "👤",
+      "agentId": null
+    },
+    {
+      "id": "chief-of-staff",
+      "name": "Chief of Staff",
+      "role": "Chief of Staff",
+      "mission": "Routes work, manages agent coordination, owns internal health and memory.",
+      "status": "active",
+      "reportsTo": "ceo",
+      "emoji": "⚡",
+      "agentId": "main"
+    },
+    {
+      "id": "forge",
+      "name": "FORGE",
+      "role": "Coder",
+      "mission": "All software development — architecture, implementation, debugging. Precise, ships fast, never breaks the build.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🔨",
+      "agentId": "forge"
+    },
+    {
+      "id": "scout",
+      "name": "SCOUT",
+      "role": "Sales Intelligence Analyst",
+      "mission": "Competitive intel for active deals — vendor landscape, pricing signals, product positioning.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🎯",
+      "agentId": "scout"
+    },
+    {
+      "id": "scribe",
+      "name": "SCRIBE",
+      "role": "Memory Keeper & Wiki Curator",
+      "mission": "Nightly processing of session logs into wiki pages. Keeps knowledge current automatically.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "📝",
+      "agentId": "scribe"
+    },
+    {
+      "id": "vault",
+      "name": "VAULT",
+      "role": "Private Financial Advisor",
+      "mission": "Private finance analysis and tracking. Runs fully local — data never leaves the machine.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🔒",
+      "agentId": "vault"
+    },
+    {
+      "id": "ember",
+      "name": "EMBER",
+      "role": "Entrepreneur Scout",
+      "mission": "Surfaces business opportunities, validates ideas with commercial frameworks. Weekly digest.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🔥",
+      "agentId": "ember"
+    },
+    {
+      "id": "revs",
+      "name": "REVS",
+      "role": "Motorbike Researcher",
+      "mission": "Scouts gear, tech, routes and innovations for serious bikers. Knows the Chigee AIO-6 LTE setup.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🏍️",
+      "agentId": "revs"
+    },
+    {
+      "id": "sysmon",
+      "name": "SYSMON",
+      "role": "Security Monitor",
+      "mission": "Silent watchdog. Runs daily security audits at 14:00 and 23:00 Zurich. Alerts #alers on critical issues only — silence means clean.",
+      "status": "active",
+      "reportsTo": "chief-of-staff",
+      "emoji": "🛡️",
+      "agentId": "sysmon"
+    }
+  ]
+}

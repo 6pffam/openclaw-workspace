@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "updatedAt": "2026-05-26T22:03:34.158Z",
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Build Nexus dashboard",
+      "description": "Next.js mission control — Team, Office, Projects, Tasks screens",
+      "status": "done",
+      "assignee": "chief-of-staff",
+      "project": "nexus",
+      "priority": "high",
+      "createdAt": "2026-05-23T00:00:00.000Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Approve Nexus phase 1 design",
+      "description": "Review Team and Projects screens. Approve to proceed to Office and Tasks.",
+      "status": "done",
+      "assignee": "ceo",
+      "project": "nexus",
+      "priority": "urgent",
+      "createdAt": "2026-05-25T00:00:00.000Z"
+    },
+    {
+      "id": "task-003",
+      "title": "Set up GitHub repo for Nexus",
+      "description": "Connect local workspace to GitHub remote.",
+      "status": "done",
+      "assignee": "ceo",
+      "project": "nexus",
+      "priority": "high",
+      "createdAt": "2026-05-24T00:00:00.000Z"
+    },
+    {
+      "id": "task-004",
+      "title": "Research sim racing wheel options",
+      "description": "Curate top direct-drive wheel options under €1500 for rig upgrade.",
+      "status": "backlog",
+      "assignee": "researcher",
+      "project": null,
+      "priority": "medium",
+      "createdAt": "2026-05-20T00:00:00.000Z"
+    },
+    {
+      "id": "task-005",
+      "title": "QA review of Nexus Team screen",
+      "description": "Verify crew cards render correctly, status badges accurate, no layout breaks.",
+      "status": "done",
+      "assignee": "qa",
+      "project": "nexus",
+      "priority": "medium",
+      "createdAt": "2026-05-25T00:00:00.000Z"
+    },
+    {
+      "id": "task-1779731484857",
+      "title": "Test task",
+      "description": "",
+      "status": "done",
+      "assignee": "ceo",
+      "project": null,
+      "priority": "medium",
+      "createdAt": "2026-05-25T17:51:24.857Z"
+    },
+    {
+      "id": "task-forge-001",
+      "title": "Add Paused column to Nexus Tasks Kanban",
+      "description": "Add a Paused status and column to the Tasks page. Tasks in In Progress should have a Pause button. Paused tasks show a Resume button. Keep the 5-column layout consistent with the existing design.",
+      "status": "done",
+      "assignee": "coder",
+      "project": "nexus",
+      "priority": "high",
+      "createdAt": "2026-05-26T23:00:00.000Z"
+    }
+  ]
+}

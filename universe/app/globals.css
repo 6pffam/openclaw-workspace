@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "@openclaw/ui/globals.css";
+
+@theme {
+  /* Tier colors — used by ForceGraph and TierBadge */
+  --color-tier-inner:  #f59e0b;
+  --color-tier-active: #60a5fa;
+  --color-tier-orbit:  #6b7280;
+  --color-tier-none:   rgba(255,255,255,0.15);
+
+  /* Connection category palette */
+  --color-cat-family:       #ef4444;
+  --color-cat-work-current: #3b82f6;
+  --color-cat-work-past:    #6366f1;
+  --color-cat-education:    #8b5cf6;
+  --color-cat-community:    #10b981;
+  --color-cat-introduced:   #f59e0b;
+}
