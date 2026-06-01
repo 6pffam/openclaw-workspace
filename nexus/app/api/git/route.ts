@@ -3,7 +3,7 @@ import { exec } from 'child_process'
 import { promisify } from 'util'
 
 const execAsync = promisify(exec)
-const NEXUS_DIR = '/Users/6pf/.openclaw/workspace/nexus'
+const WORKSPACE_DIR = '/Users/6pf/.openclaw/workspace'
 
 export async function POST() {
   try {
@@ -11,17 +11,18 @@ export async function POST() {
       day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
     })
 
-    await execAsync('git add .', { cwd: NEXUS_DIR })
+    await execAsync('git add -A', { cwd: WORKSPACE_DIR })
 
     let committed = true
     try {
-      await execAsync(`git commit -m "save: ${timestamp}"`, { cwd: NEXUS_DIR })
+      await execAsync(`git commit -m "save: ${timestamp}"`, { cwd: WORKSPACE_DIR })
     } catch {
-      // Nothing to commit
       committed = false
     }
 
-    await execAsync('git push origin main', { cwd: NEXUS_DIR })
+    if (committed) {
+      await execAsync('git push origin main', { cwd: WORKSPACE_DIR })
+    }
 
     return NextResponse.json({
       ok: true,
