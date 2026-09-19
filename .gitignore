@@ -49,3 +49,5 @@ raw/
 
 # Font data (embedded in pptx etc)
 *.fntdata
+forge/
+*-workspace/
