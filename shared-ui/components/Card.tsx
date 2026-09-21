@@ -1,6 +1,6 @@
-import type { CSSProperties, ReactNode } from 'react'
+import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
 
-interface CardProps {
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   className?: string
   style?: CSSProperties
@@ -13,6 +13,13 @@ interface CardProps {
   padding?: string
 }
 
+/**
+ * Unrecognised props are forwarded to the root element, so callers can attach
+ * `data-*` hooks, `id`, `aria-*`, `title` and event handlers without wrapping
+ * the component in a spare element. They are spread before `className` and
+ * `style`, which the component always computes itself — so this is additive:
+ * nothing a caller could already pass changes meaning.
+ */
 export default function Card({
   children,
   className = '',
@@ -21,6 +28,7 @@ export default function Card({
   ghost = false,
   highlight = false,
   padding = 'p-5',
+  ...rest
 }: CardProps) {
   const bg = alt ? '#132033' : ghost ? 'rgba(15,34,54,0.4)' : '#0f2236'
   const border = highlight
@@ -31,6 +39,7 @@ export default function Card({
 
   return (
     <div
+      {...rest}
       className={`rounded-2xl transition-all ${padding} ${className}`}
       style={{
         backgroundColor: bg,

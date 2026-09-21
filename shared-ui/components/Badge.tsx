@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 type BadgeVariant = 'active' | 'idle' | 'planned' | 'danger' | 'amber' | 'blue' | 'default'
 
-interface BadgeProps {
+interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   children: ReactNode
   variant?: BadgeVariant
   dot?: boolean
@@ -19,11 +19,25 @@ const variantStyles: Record<BadgeVariant, { color: string; bg: string }> = {
   default: { color: 'rgba(255,255,255,0.55)',   bg: 'rgba(255,255,255,0.06)' },
 }
 
-export default function Badge({ children, variant = 'default', dot = false, className = '' }: BadgeProps) {
+/**
+ * Unrecognised props are forwarded to the root element, so callers can attach
+ * `data-*` hooks, `id`, `aria-*`, `title` and event handlers without wrapping
+ * the component in a spare element. They are spread before `className` and
+ * `style`, which the component always computes itself — so this is additive:
+ * nothing a caller could already pass changes meaning.
+ */
+export default function Badge({
+  children,
+  variant = 'default',
+  dot = false,
+  className = '',
+  ...rest
+}: BadgeProps) {
   const { color, bg } = variantStyles[variant]
 
   return (
     <span
+      {...rest}
       className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${className}`}
       style={{ backgroundColor: bg, color }}
     >

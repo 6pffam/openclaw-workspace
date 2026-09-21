@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
 export interface NavTab {
   label: string
   href: string
 }
 
-interface NavBarProps {
+interface NavBarProps extends HTMLAttributes<HTMLElement> {
   tabs: NavTab[]
   /** Optional left slot — logo, app name, etc. */
   left?: ReactNode
@@ -21,12 +21,20 @@ interface NavBarProps {
  * Base NavBar shell — pill-style navigation, dark navy background.
  * Each app passes its own `tabs` and optional `left`/`right` slots.
  */
-export default function NavBar({ tabs, left, right }: NavBarProps) {
+/**
+ * Unrecognised props are forwarded to the root element, so callers can attach
+ * `data-*` hooks, `id`, `aria-*`, `title` and event handlers without wrapping
+ * the component in a spare element. They are spread before `className` and
+ * `style`, which the component always computes itself — so this is additive:
+ * nothing a caller could already pass changes meaning.
+ */
+export default function NavBar({ tabs, left, right, className = '', ...rest }: NavBarProps) {
   const pathname = usePathname()
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3"
+      {...rest}
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 ${className}`}
       style={{ backgroundColor: '#0d1b2a', borderBottom: '1px solid rgba(255,255,255,0.05)' }}
     >
       <div className="w-24 flex items-center">

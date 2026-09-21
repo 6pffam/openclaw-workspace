@@ -1,15 +1,29 @@
-import type { ReactNode } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 
-interface PageHeaderProps {
+// `title` is narrowed to a string by HTMLAttributes; this one is the heading.
+interface PageHeaderProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   title: ReactNode
   subtitle?: ReactNode
   actions?: ReactNode
   className?: string
 }
 
-export default function PageHeader({ title, subtitle, actions, className = '' }: PageHeaderProps) {
+/**
+ * Unrecognised props are forwarded to the root element, so callers can attach
+ * `data-*` hooks, `id`, `aria-*`, `title` and event handlers without wrapping
+ * the component in a spare element. They are spread before `className` and
+ * `style`, which the component always computes itself — so this is additive:
+ * nothing a caller could already pass changes meaning.
+ */
+export default function PageHeader({
+  title,
+  subtitle,
+  actions,
+  className = '',
+  ...rest
+}: PageHeaderProps) {
   return (
-    <div className={`flex items-start justify-between mb-6 ${className}`}>
+    <div {...rest} className={`flex items-start justify-between mb-6 ${className}`}>
       <div>
         <h1 className="text-xl font-semibold" style={{ color: 'white' }}>
           {title}

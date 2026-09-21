@@ -10,5 +10,8 @@
   "peerDependencies": {
     "react": ">=19",
     "next": ">=15"
+  },
+  "scripts": {
+    "test": "npx --yes vitest run"
   }
 }

@@ -42,6 +42,13 @@ const sizeStyles: Record<Size, string> = {
   lg: 'px-6 py-2.5 text-base',
 }
 
+/**
+ * Unrecognised props are forwarded to the root element, so callers can attach
+ * `data-*` hooks, `id`, `aria-*`, `title` and event handlers without wrapping
+ * the component in a spare element. They are spread before `className` and
+ * `style`, which the component always computes itself — so this is additive:
+ * nothing a caller could already pass changes meaning.
+ */
 export default function Button({
   children,
   variant = 'secondary',
@@ -55,6 +62,7 @@ export default function Button({
 
   return (
     <button
+      {...rest}
       disabled={disabled}
       className={`rounded-lg font-medium transition-all cursor-pointer ${sizeStyles[size]} ${className}`}
       style={{
@@ -65,7 +73,6 @@ export default function Button({
         cursor: disabled ? 'not-allowed' : 'pointer',
         ...style,
       }}
-      {...rest}
     >
       {children}
     </button>
